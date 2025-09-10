@@ -2,49 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Modern Design System with Beautiful Gradients and Colors */
+/* UnifiedHorizon Design System - Professional Legal Practice Aesthetic */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Core Brand Colors */
+    --background: 215 25% 97%; /* #F7F8FA near-white */
+    --foreground: 220 39% 11%; /* #111827 slate text */
+    
+    /* Deep charcoal for headers and emphasis */
+    --charcoal: 215 25% 8%; /* #0F1115 deep charcoal */
+    --charcoal-foreground: 215 25% 97%;
+    
+    /* Card and surface colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 220 39% 11%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 248 85% 63%;
+    --popover-foreground: 220 39% 11%;
+    
+    /* Primary indigo accent */
+    --primary: 238 69% 59%; /* #4F46E5 accent indigo */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 255 91% 76%;
-
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 220 14% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 248 85% 63%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 248 85% 63%;
-
-    --gradient-primary: linear-gradient(135deg, hsl(248 85% 63%), hsl(255 91% 76%));
-    --gradient-hero: linear-gradient(135deg, hsl(248 85% 63% / 0.1), hsl(255 91% 76% / 0.05));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 98%));
+    --primary-hover: 238 69% 55%;
     
-    --shadow-elegant: 0 4px 6px -1px hsl(248 85% 63% / 0.1), 0 2px 4px -1px hsl(248 85% 63% / 0.06);
-    --shadow-glow: 0 0 0 1px hsl(248 85% 63% / 0.05), 0 10px 15px -3px hsl(248 85% 63% / 0.1);
+    /* Secondary teal accent */
+    --secondary: 173 80% 40%; /* #14B8A6 secondary teal */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 173 80% 35%;
     
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    --radius: 0.75rem;
+    /* Muted and neutral tones */
+    --muted: 215 16% 94%;
+    --muted-foreground: 220 13% 46%;
+    
+    --accent: 215 16% 94%;
+    --accent-foreground: 220 39% 11%;
+    
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Interactive elements */
+    --border: 215 16% 87%;
+    --input: 215 16% 94%;
+    --ring: 238 69% 59%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(238 69% 59% / 0.9), hsl(173 80% 40% / 0.8));
+    --gradient-subtle: linear-gradient(180deg, hsl(215 25% 97%), hsl(215 16% 94%));
+    
+    /* Shadows */
+    --shadow-subtle: 0 1px 3px hsl(220 39% 11% / 0.08);
+    --shadow-card: 0 4px 12px hsl(220 39% 11% / 0.08);
+    --shadow-elevated: 0 8px 32px hsl(220 39% 11% / 0.12);
+    
+    /* Spacing scale (8pt grid) */
+    --spacing-xs: 0.5rem; /* 8px */
+    --spacing-sm: 1rem;   /* 16px */
+    --spacing-md: 1.5rem; /* 24px */
+    --spacing-lg: 2rem;   /* 32px */
+    --spacing-xl: 3rem;   /* 48px */
+    --spacing-2xl: 4rem;  /* 64px */
+    
+    /* Border radius system */
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -64,41 +90,11 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark theme for future use */
+    --background: 215 25% 8%;
+    --foreground: 215 25% 97%;
+    --charcoal: 215 25% 97%;
+    --charcoal-foreground: 215 25% 8%;
   }
 }
 
@@ -108,6 +104,67 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+  }
+
+  /* Typography hierarchy */
+  .heading-xl {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .heading-lg {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .heading-md {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.875rem;
+    line-height: 1.3;
+  }
+
+  .heading-sm {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  /* Hero image duotone effect */
+  .hero-duotone {
+    filter: contrast(1.1) saturate(1.2) hue-rotate(10deg);
+    position: relative;
+  }
+
+  .hero-duotone::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-hero);
+    mix-blend-mode: multiply;
+    opacity: 0.3;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus styles for accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
   }
 }

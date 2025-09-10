@@ -1,62 +1,75 @@
-import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-image.jpg";
+import { Button } from "./ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
+import { Badge } from "./ui/badge";
+import { ContactForm } from "./ContactForm";
 
-const Hero = () => {
+export const Hero = () => {
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById("services");
+    servicesSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero pt-20">
-      <div className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Welcome to the Future
-              </span>
-              <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-                Build Amazing
-                <span className="bg-gradient-primary bg-clip-text text-transparent"> Digital </span>
-                Experiences
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Transform your ideas into reality with our cutting-edge platform. 
-                Create, innovate, and scale your business to new heights.
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="shadow-glow">
-                Start Building
-              </Button>
-              <Button variant="outline" size="lg">
-                Watch Demo
-              </Button>
-            </div>
-            
-            <div className="flex items-center space-x-8 text-sm text-muted-foreground">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Trusted by 10k+ users</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>99.9% uptime</span>
-              </div>
-            </div>
-          </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img
+          src="/lovable-uploads/9d37dfe8-4c2b-4ddf-af0d-7381036c08db.png"
+          alt="Modern office interior with wood paneling and blinds"
+          className="w-full h-full object-cover hero-duotone"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-charcoal/70 via-charcoal/60 to-primary/30"></div>
+      </div>
+
+      {/* Hero Content */}
+      <div className="relative z-10 container mx-auto px-6 text-center text-white">
+        {/* Subtitle Chip */}
+        <Badge variant="secondary" className="mb-6 bg-white/10 text-white border-white/20 backdrop-blur-sm">
+          India | Cross-Border Capabilities
+        </Badge>
+
+        {/* Main Heading */}
+        <h1 className="heading-xl mb-6 max-w-4xl mx-auto">
+          UnifiedHorizon — Not just a consultancy, A legal atelier
+        </h1>
+
+        {/* Subheading */}
+        <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+          Practice-led advice across corporate transactions, disputes, and regulatory interfaces, 
+          presented in a factual format suitable for international teams.
+        </p>
+
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button
+            onClick={scrollToServices}
+            size="lg"
+            variant="default"
+            className="bg-primary hover:bg-primary-hover text-white border-0 min-w-[200px] focus-ring"
+          >
+            Explore Services
+          </Button>
           
-          <div className="relative">
-            <div className="relative z-10">
-              <img 
-                src={heroImage} 
-                alt="Digital innovation and technology" 
-                className="w-full h-auto rounded-2xl shadow-glow"
-              />
-            </div>
-            <div className="absolute -inset-4 bg-gradient-primary opacity-20 rounded-2xl blur-xl"></div>
-          </div>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm min-w-[200px] focus-ring"
+              >
+                Contact
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-md">
+              <DialogHeader>
+                <DialogTitle className="heading-sm">Request Consultation</DialogTitle>
+              </DialogHeader>
+              <ContactForm />
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </section>
   );
 };
-
-export default Hero;

@@ -1,62 +1,64 @@
-const Footer = () => {
+export const Footer = () => {
   return (
-    <footer className="bg-foreground text-background py-12">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8">
+    <footer className="bg-charcoal text-charcoal-foreground">
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* About Section */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg"></div>
-              <span className="text-xl font-bold">Nexus</span>
-            </div>
-            <p className="text-background/70">
-              Building the future of digital experiences, one innovation at a time.
+            <h3 className="heading-sm text-white mb-4">UnifiedHorizon</h3>
+            <p className="text-white/80 leading-relaxed">
+              UnifiedHorizon is an Indian law firm presenting capabilities through factual, 
+              practice-area descriptions consistent with professional norms.
             </p>
           </div>
 
+          {/* Contact Information */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Product</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Features</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Integrations</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">API</a></li>
-            </ul>
+            <h4 className="font-semibold text-white mb-4">Contact</h4>
+            <div className="space-y-2 text-white/80">
+              <p>[Address Placeholder]</p>
+              <p>New Delhi, India</p>
+              <p className="mt-3">
+                <a 
+                  href="mailto:contact@unifiedhorizon.in" 
+                  className="hover:text-white transition-colors focus-ring rounded px-1 py-1"
+                >
+                  contact@unifiedhorizon.in
+                </a>
+              </p>
+            </div>
           </div>
 
+          {/* Legal Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Company</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">About</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Blog</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Careers</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Contact</a></li>
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="font-semibold">Support</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Documentation</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Status</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Community</a></li>
-            </ul>
+            <h4 className="font-semibold text-white mb-4">Legal</h4>
+            <div className="space-y-2">
+              <a 
+                href="#privacy" 
+                className="block text-white/80 hover:text-white transition-colors focus-ring rounded px-1 py-1"
+              >
+                Privacy Policy
+              </a>
+              <a 
+                href="#terms" 
+                className="block text-white/80 hover:text-white transition-colors focus-ring rounded px-1 py-1"
+              >
+                Terms of Service
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-background/70">
-            © 2024 Nexus. All rights reserved.
+        {/* Bottom Section */}
+        <div className="border-t border-white/20 mt-8 pt-8 space-y-4">
+          <p className="text-white/60 text-sm italic">
+            This page avoids advertising language in line with Indian legal practice norms.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-background/70 hover:text-background transition-colors">Privacy</a>
-            <a href="#" className="text-background/70 hover:text-background transition-colors">Terms</a>
-            <a href="#" className="text-background/70 hover:text-background transition-colors">Cookies</a>
-          </div>
+          <p className="text-white/60 text-sm">
+            © 2024 UnifiedHorizon. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
   );
 };
-
-export default Footer;
