@@ -2,6 +2,20 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./
 
 const practiceAreas = [
   {
+    id: "intellectual-property",
+    title: "Intellectual Property",
+    content: {
+      overview: "Coverage spans registration, portfolio management, transactional exploitation, and enforcement before courts and IP offices, including trademarks, copyrights, patents, designs, domain names, trade secrets, plant varieties, and geographical indications. Work includes clearance, filings/prosecution, oppositions/cancellations, licensing/assignments, brand protection online/offline, customs recordal, and civil/criminal enforcement.",
+      points: [
+        "Trademarks/designs prosecution, oppositions, rectifications, Madrid Protocol coordination.",
+        "Patent filings, FER responses, amendments, patentability/FTO opinions with technical counsel.",
+        "IP transactions: licensing, franchise, R&D collaborations, joint development, IP holding structures.",
+        "Enforcement: injunctions, passing off, customs seizures, anti‑counterfeiting, marketplace takedowns.",
+        "Trade secret frameworks, employee IP assignment, and know‑how protection in contracts."
+      ]
+    }
+  },
+  {
     id: "corporate-law",
     title: "Corporate Law",
     content: {
@@ -26,20 +40,6 @@ const practiceAreas = [
         "Technology and IP licensing, SaaS subscriptions, DPAs, escrow/source code arrangements.",
         "Advertising, consumer law, and product compliance for retail and digital channels.",
         "Trade compliance touchpoints in customs and indirect tax‑sensitive flows."
-      ]
-    }
-  },
-  {
-    id: "intellectual-property",
-    title: "Intellectual Property",
-    content: {
-      overview: "Coverage spans registration, portfolio management, transactional exploitation, and enforcement before courts and IP offices, including trademarks, copyrights, patents, designs, domain names, trade secrets, plant varieties, and geographical indications. Work includes clearance, filings/prosecution, oppositions/cancellations, licensing/assignments, brand protection online/offline, customs recordal, and civil/criminal enforcement.",
-      points: [
-        "Trademarks/designs prosecution, oppositions, rectifications, Madrid Protocol coordination.",
-        "Patent filings, FER responses, amendments, patentability/FTO opinions with technical counsel.",
-        "IP transactions: licensing, franchise, R&D collaborations, joint development, IP holding structures.",
-        "Enforcement: injunctions, passing off, customs seizures, anti‑counterfeiting, marketplace takedowns.",
-        "Trade secret frameworks, employee IP assignment, and know‑how protection in contracts."
       ]
     }
   },
@@ -70,18 +70,6 @@ const practiceAreas = [
     }
   },
   {
-    id: "competition---antitrust",
-    title: "Competition & Antitrust",
-    content: {
-      overview: "Advice on merger control notifications, gun‑jumping mitigation, JV coordination, verticals/pricing policies, dawn raid preparedness, and cartel/abuse investigations before the CCI and appellate forums.",
-      points: [
-        "Combinations analysis, Form I/II filings, remedy/commitment design.",
-        "Vertical restraints, discount structures, MFN/exclusivity assessment, distribution design.",
-        "Investigations, leniency strategy, and competition audits with document/communications protocols."
-      ]
-    }
-  },
-  {
     id: "banking--finance---ibc-interface",
     title: "Banking, Finance & IBC Interface",
     content: {
@@ -102,6 +90,18 @@ const practiceAreas = [
         "SaaS/cloud contracts, SLAs, support/maintenance, escrow and source code access.",
         "Data governance, transfer assessments, consent/notice frameworks, incident responses.",
         "Fintech, healthtech, marketplace compliance in Indian regimes."
+      ]
+    }
+  },
+  {
+    id: "competition---antitrust",
+    title: "Competition & Antitrust",
+    content: {
+      overview: "Advice on merger control notifications, gun‑jumping mitigation, JV coordination, verticals/pricing policies, dawn raid preparedness, and cartel/abuse investigations before the CCI and appellate forums.",
+      points: [
+        "Combinations analysis, Form I/II filings, remedy/commitment design.",
+        "Vertical restraints, discount structures, MFN/exclusivity assessment, distribution design.",
+        "Investigations, leniency strategy, and competition audits with document/communications protocols."
       ]
     }
   }
