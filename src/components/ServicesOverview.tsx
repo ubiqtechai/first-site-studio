@@ -2,16 +2,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/
 
 const services = [
   {
+    title: "Intellectual Property",
+    description: "Full trademark, patent, design, copyright lifecycle — prosecution, transactions, enforcement, and portfolio strategy."
+  },
+  {
     title: "Corporate Law",
     description: "Lifecycle counsel for entity structuring, M&A, JVs, PE/VC, governance, and reorganizations under Indian law and FDI norms."
   },
   {
     title: "Commercial Law", 
     description: "Day-to-day and strategic contracts across supply, distribution, franchise, technology, and platform arrangements."
-  },
-  {
-    title: "Intellectual Property",
-    description: "Full trademark, patent, design, copyright lifecycle — prosecution, transactions, enforcement, and portfolio strategy."
   },
   {
     title: "Civil Litigation",
@@ -22,16 +22,16 @@ const services = [
     description: "Institutional and ad hoc proceedings seated in India and abroad, including interim relief and award enforcement."
   },
   {
-    title: "Competition & Antitrust",
-    description: "Merger control, verticals, investigations, leniency, and compliance programs before the CCI and appellate fora."
-  },
-  {
     title: "Banking, Finance & IBC",
     description: "Financing documentation, security creation, restructuring, and IBC strategy before NCLT/NCLAT."
   },
   {
     title: "Technology, Data & Platforms",
     description: "Technology transactions, SaaS terms, data governance, and sector overlays for fintech, healthtech, and marketplaces."
+  },
+  {
+    title: "Competition & Antitrust",
+    description: "Merger control, verticals, investigations, leniency, and compliance programs before the CCI and appellate fora."
   }
 ];
 
