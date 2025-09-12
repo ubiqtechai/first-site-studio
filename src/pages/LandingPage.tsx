@@ -1,7 +1,9 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
+import { AboutUs } from "@/components/AboutUs";
 import { ServicesOverview } from "@/components/ServicesOverview";
 import { PracticeDetails } from "@/components/PracticeDetails";
+import { OurTeam } from "@/components/OurTeam";
 import { Footer } from "@/components/Footer";
 
 const LandingPage = () => {
@@ -10,8 +12,10 @@ const LandingPage = () => {
       <Navigation />
       <main>
         <Hero />
+        <AboutUs />
         <ServicesOverview />
         <PracticeDetails />
+        <OurTeam />
       </main>
       <Footer />
     </div>
